@@ -14,15 +14,15 @@ public class TestSinglyLinkedList {
 		list.add(9);
 		list.add(3);
 		list.displayAll();
-		list.searchByValue(3);
-		list.displayAll();
-		list.addByValue(2);
-		
-		list.addByPosition(5,3);
-		list.displayAll();
-		list.deleteByVlaue(3);
-		list.deleteByPosition(0);
-		list.displayAll();
+		list.searchByValue(5);
+//		list.displayAll();
+//		list.addByValue(2);
+//		
+//		list.addByPosition(5,3);
+//		list.displayAll();
+//		list.deleteByVlaue(3);
+//		list.deleteByPosition(0);
+//		list.displayAll();
 
 	}
 

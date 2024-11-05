@@ -55,6 +55,7 @@ public class SinglyLinkedlist {
 		Node newnode = new Node(val);
 		if(head == null) {
 			head = newnode;
+			System.out.println("the list is empty");
 		}
 		else {
 			Node temp = head;
@@ -159,7 +160,7 @@ public class SinglyLinkedlist {
 			Node temp = head;
 			
 			while( temp != null ) {
-				System.out.println(temp.data);
+				System.out.println(temp.data+" ");
 				temp = temp.next;
 			}
 			System.out.println("-------------------------------------------");
