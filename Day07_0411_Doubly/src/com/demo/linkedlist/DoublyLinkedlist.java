@@ -114,20 +114,84 @@ public class DoublyLinkedlist {
 
 	public void addBeforeValue(int oldval, int newval) {
 		// TODO Auto-generated method stub
-		Node newnode = new Node(newval);
-		Node temp = head;
-		Node prev = null;
-		while(temp != null && temp.data != oldval) {
-			temp = temp.next;
-			prev = temp;
+		if(head == null) {
+			System.out.println("List is empty");
 		}
-		if(temp != null) {
-			prev.next = newnode;
-			newnode.next = temp;
-			temp = temp.next;
+		else {
+			Node newnode = new Node(newval);
 			
+			if(head.data == oldval) {
+				head.prev = newnode;
+				newnode.next = head;
+				head = newnode;
+				 
+			}
+			else {
+				Node temp = head;
+				while(temp != null && temp.data != oldval) {
+					temp = temp.next;
+				}
+				if(temp != null) {
+					newnode.next = temp;
+					temp.prev.next = newnode;
+					temp.prev = newnode;
+					newnode.prev = temp.prev;
+				}else {
+					System.out.println("Not found");
+				}
+			}
 		}
+	}
 
-		
+	public void addAfterValue(int old, int newval) {
+		// TODO Auto-generated method stub
+		if(head == null) {
+			System.out.println("List is empty");
+		}
+		else {
+			Node newnode = new Node(newval);
+			
+			if(head.data == old) {
+				newnode.next = head.next;
+				head.next = newnode;
+				head.next.prev = newnode;
+				newnode.prev = head;
+			}else {
+				Node temp = head;
+				
+				while(temp != null && temp.data != old) {
+					temp = temp.next;
+				}
+				if(temp != null) {
+					newnode.next = temp.next;
+					if(temp.next != null) {
+						temp.prev.next = newnode;
+						newnode.prev = temp;
+					}
+					temp.next = newnode;
+				}else {
+					System.out.println("Not found");
+				}
+			}
+		}
+	}
+
+	public void displayInReverse() {
+		// TODO Auto-generated method stub
+		if(head == null) {
+			System.out.println("list is empty");
+		}
+		else {
+			Node temp = head;
+			while(temp.next != null) {
+				temp = temp.next;
+			}
+			while(temp != null) {
+				System.out.println(temp.data + " ");
+				temp = temp.prev;
+			}
+		}
+		System.out.println("----------------------------------");
 	}
 }
+

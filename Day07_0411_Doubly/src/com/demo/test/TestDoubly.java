@@ -13,13 +13,13 @@ public class TestDoubly {
 		dlst.addNode(5);
 		dlst.addNode(8);
 		
-//		dlst.displayAll();
-//		
-//		dlst.deleteByPosition(2);
-//		dlst.displayAll();
-//		
-//		dlst.addByPosition(5,3);
-//		dlst.displayAll();
+		dlst.displayAll();
+		
+		dlst.deleteByPosition(2);
+		dlst.displayAll();
+		
+		dlst.addByPosition(5,3);
+		dlst.displayAll();
 		dlst.displayAll();
 		
 		int data = dlst.searchByPosition(1);
@@ -29,8 +29,15 @@ public class TestDoubly {
 		else
 			System.out.println(data+"-> Value found at Entered position..");
 		
-//		dlst.displayAll();
-//		dlst.addBeforeValue(7,3);
+		dlst.displayAll();
+		
+		dlst.addBeforeValue(5,3);
+		dlst.displayAll();
+		
+		dlst.addAfterValue(8,9);
+		dlst.displayAll();
+		
+		dlst.displayInReverse();
 		
 	}
 
