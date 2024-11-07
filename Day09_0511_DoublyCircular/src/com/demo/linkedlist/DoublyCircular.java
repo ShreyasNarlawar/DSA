@@ -27,15 +27,13 @@ public class DoublyCircular {
 			newnode.prev = newnode;
 		}
 		else {
-			Node temp = head;
-			while(temp.next != head) {
-				temp.next = newnode;
-				newnode.prev = temp;
-				newnode.next = temp.next;
-				temp.next.prev = newnode;
-			}
+			Node tail = head.prev;
+			tail.next = newnode;
+			newnode.prev=tail;
+			newnode.next = head;
+			head.prev = newnode;
+			System.out.println("Added SuccessFully..");
 		}
-		
 	}
 
 	public void displayAll() {
@@ -51,8 +49,35 @@ public class DoublyCircular {
 			}
 			System.out.println(temp.data);
 		}
+		System.out.println("=====================================================");
 	}
-	
+	public void deleteByPosition(int pos) {
+		if(head == null) {
+			System.out.println("List is Empty");
+		}
+		else {
+			Node temp=head;
+			if(pos==1) {
+				head.prev.next = temp.next;
+				temp.next.prev = temp.prev;
+				head=temp.next;
+			}else {
+				int i=1;
+				for(;temp.next != head && i<=pos-1;i++)
+					temp = temp.next;
+				if(i>pos-1) {
+					temp.next.prev = temp.prev;
+					temp.prev.next=temp.next;
+					temp.next = null;
+					temp.prev = null;
+					temp=null;
+					System.out.println("Deleted Successfully..");
+				}else
+					System.out.println("Position Beyond Limit..");
+			}
+				
+		}
+	}
 	
 
 }

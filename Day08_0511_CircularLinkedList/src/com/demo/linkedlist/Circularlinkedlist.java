@@ -39,13 +39,13 @@ public class Circularlinkedlist {
 		else {
 			Node temp = head;
 			while(temp.next != head) {
-				System.out.println(temp.data);
+				System.out.print(temp.data+"\t");
 				temp = temp.next;
 			}
 			System.out.println(temp.data);
 			
 		}
-		System.out.println("---------------------------------------------------------");
+		System.out.println("\n---------------------------------------------------------");
 		
 	}
 
@@ -92,8 +92,8 @@ public class Circularlinkedlist {
 			if(pos == 1) {
 				tail.next = temp.next;
 				head = temp.next;
-				head.next = null;
-				head = null;
+				temp.next = null;
+				temp = null;
 		   }
 			else {
 				for(int i = 1; temp != null && i <= pos -1; i++) {

@@ -11,7 +11,15 @@ public class TestDoublyCircular {
 		
 		dclst.addNode(5);
 		dclst.addNode(10);
+		dclst.addNode(4);
+		dclst.addNode(7);
+		dclst.addNode(9);
+		dclst.addNode(16);
+		dclst.addNode(13);
 		
+		dclst.displayAll();
+		
+		dclst.deleteByPosition(3);
 		dclst.displayAll();
 	}
 

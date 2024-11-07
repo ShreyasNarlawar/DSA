@@ -21,7 +21,7 @@ public class TestCircularLinkedlist {
 		clst.deleteByPosition(1);
 		clst.displayAll();
 		
-		clst.addByValue(3);
+//		clst.addByValue(3);
 		
 		
 	}
