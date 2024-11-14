@@ -37,7 +37,7 @@ public class TestDoubly {
 		dlst.addAfterValue(8,9);
 		dlst.displayAll();
 		
-		dlst.displayInReverse();
+		//dlst.displayInReverse();
 		
 	}
 

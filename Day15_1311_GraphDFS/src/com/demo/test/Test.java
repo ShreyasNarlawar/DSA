@@ -14,7 +14,7 @@ public class Test {
 				Graph g=new Graph(v);
 				StoreGraph(g,v);
 				g.printGraph();
-				//g.DFSTraversal(0);
+				g.DFSTraversal(0);
 				g.BFSTraversal(0);
 
 			}
